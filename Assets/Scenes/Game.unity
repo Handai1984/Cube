@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.44646078, g: 0.4962827, b: 0.5747473, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -461,25 +461,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startFollow: 0
---- !u!1 &457250653
+--- !u!1 &457250653 stripped
 GameObject:
-  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 164512, guid: 5307952ef62a41c41bf350bcc598666a, type: 2}
   m_PrefabInternal: {fileID: 1624783313}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 457250658}
-  - component: {fileID: 457250657}
-  - component: {fileID: 457250656}
-  - component: {fileID: 457250655}
-  - component: {fileID: 457250654}
-  m_Layer: 0
-  m_Name: cube_books
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!114 &457250654
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -504,62 +489,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.28021762, y: 0.25406492, z: 0.26486117}
   m_Center: {x: -0.0076782256, y: -6.057052e-33, z: 1.0162048e-25}
---- !u!23 &457250656
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 2303952, guid: 5307952ef62a41c41bf350bcc598666a,
-    type: 2}
-  m_PrefabInternal: {fileID: 1624783313}
-  m_GameObject: {fileID: 457250653}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_Materials:
-  - {fileID: 2100000, guid: 7f8c29126557e934fb124d9716ee6d1b, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
---- !u!33 &457250657
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 3303962, guid: 5307952ef62a41c41bf350bcc598666a,
-    type: 2}
-  m_PrefabInternal: {fileID: 1624783313}
-  m_GameObject: {fileID: 457250653}
-  m_Mesh: {fileID: 4300048, guid: cc7bf13c17cf3544194154a94a9aeb01, type: 3}
---- !u!4 &457250658
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 440238, guid: 5307952ef62a41c41bf350bcc598666a, type: 2}
-  m_PrefabInternal: {fileID: 1624783313}
-  m_GameObject: {fileID: 457250653}
-  m_LocalRotation: {x: -4.32978e-17, y: 0.7071067, z: 0.7071068, w: -4.3297806e-17}
-  m_LocalPosition: {x: 2.879, y: 0.127, z: -3.638}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: -89.980194, y: -180, z: 0}
 --- !u!1 &477488936
 GameObject:
   m_ObjectHideFlags: 0
@@ -619,13 +548,13 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
-  mWidth: 70
+  mWidth: 72
   mHeight: 20
   mDepth: 0
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 3.5
+  aspectRatio: 3.6
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 12800000, guid: 8c0c3499e478b364b9e6f42a93584013, type: 3}
   mFont: {fileID: 0}
@@ -843,13 +772,13 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
-  mWidth: 70
+  mWidth: 72
   mHeight: 20
   mDepth: 0
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 3.5
+  aspectRatio: 3.6
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 12800000, guid: 8c0c3499e478b364b9e6f42a93584013, type: 3}
   mFont: {fileID: 0}
@@ -1380,8 +1309,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1200031947}
   - component: {fileID: 1200031948}
+  - component: {fileID: 1200031951}
+  - component: {fileID: 1200031950}
+  - component: {fileID: 1200031949}
   m_Layer: 8
-  m_Name: logo (1)
+  m_Name: Exit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1433,7 +1365,7 @@ MonoBehaviour:
   mWidth: 60
   mHeight: 60
   mDepth: 0
-  autoResizeBoxCollider: 0
+  autoResizeBoxCollider: 1
   hideIfOffScreen: 0
   keepAspectRatio: 1
   aspectRatio: 1
@@ -1453,6 +1385,58 @@ MonoBehaviour:
   mAtlas: {fileID: 114000013406371888, guid: ec83c50518be3b1489e71e4aae7fc6bc, type: 2}
   mSpriteName: btn_noads
   mFillCenter: 1
+--- !u!114 &1200031949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1200031946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68130fdcff53a4b87989573fefe22964, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1200031950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1200031946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fdca5042b1d12a4890ec1bd4f04290d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tweenTarget: {fileID: 1200031946}
+  hover: {r: 0.88235295, g: 0.78431374, b: 0.5882353, a: 1}
+  pressed: {r: 0.7176471, g: 0.6392157, b: 0.48235294, a: 1}
+  disabledColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  duration: 0.2
+  dragHighlight: 0
+  hoverSprite: 
+  pressedSprite: 
+  disabledSprite: 
+  hoverSprite2D: {fileID: 0}
+  pressedSprite2D: {fileID: 0}
+  disabledSprite2D: {fileID: 0}
+  pixelSnap: 0
+  onClick:
+  - mTarget: {fileID: 1200031949}
+    mMethodName: ExitGame
+    mParameters: []
+    oneShot: 0
+--- !u!65 &1200031951
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1200031946}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 60, y: 60, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1236907021
 GameObject:
   m_ObjectHideFlags: 0
@@ -2078,7 +2062,7 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
-  mWidth: 46
+  mWidth: 44
   mHeight: 22
   mDepth: 0
   autoResizeBoxCollider: 0
@@ -2254,7 +2238,6 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5307952ef62a41c41bf350bcc598666a, type: 2}
-  m_RootGameObject: {fileID: 457250653}
   m_IsPrefabParent: 0
 --- !u!1 &1632351481
 GameObject:
