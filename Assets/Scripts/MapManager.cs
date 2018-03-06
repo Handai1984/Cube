@@ -187,7 +187,7 @@ public class MapManager : MonoBehaviour {
                 rb.angularVelocity = new Vector3(Random.Range(0.0f, 1.0f), Random.Range(0.0f, 1.0f), Random.Range(0.0f, 1.0f)) * Random.Range(1, 10);
                 GameObject.Destroy(mapList[index][i], 1.0f);
             }
-            if (m_PlayerController.z == index)
+			if (m_PlayerController.z == index||m_PlayerController.life==false)//解决了开局地图方块会掉落的问题！
             {
                 StopTileDown();
                 m_PlayerController.gameObject.AddComponent<Rigidbody>();

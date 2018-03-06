@@ -30,7 +30,7 @@ public class UIManager : MonoBehaviour {
         m_GameScoreLabel = GameObject.Find("GameScoreLabel").GetComponent<UILabel>();
         m_GameGemLabel = GameObject.Find("GameGemLabel").GetComponent<UILabel>();
 
-        m_PlayerController = GameObject.Find("cube_books").GetComponent<PlayerController>();
+        m_PlayerController = GameObject.Find("cube_books").GetComponent<PlayerController>();	
 
         m_PlayButton = GameObject.Find("play_btn");
         UIEventListener.Get(m_PlayButton).onClick = PlayButtonClick;
@@ -49,9 +49,10 @@ public class UIManager : MonoBehaviour {
 
     private void Init()
     {
-        m_ScoreLabel.text = PlayerPrefs.GetInt("score",0) + "";
+		//PlayerPrefs.DeleteAll ();
+		m_ScoreLabel.text = PlayerPrefs.GetInt("score", 0) + "";
         m_GemLabel.text = PlayerPrefs.GetInt("gem", 0) + "/100";
-        m_GameScoreLabel.text = "0";
+		m_GameScoreLabel.text = PlayerPrefs.GetInt("score", 0) + "";	
         m_GameGemLabel.text = PlayerPrefs.GetInt("gem", 0) + "/100";
     }
 
@@ -59,7 +60,7 @@ public class UIManager : MonoBehaviour {
     {
         m_GemLabel.text = gem + "/100";
         m_GameScoreLabel.text = score.ToString();
-        m_GameGemLabel.text = gem + "/100";
+		m_GameGemLabel.text = gem + "/100";
     }
 
     private void PlayButtonClick(GameObject go)
@@ -67,6 +68,7 @@ public class UIManager : MonoBehaviour {
         Debug.Log("游戏开始啦.");
         m_StartUI.SetActive(false);
         m_GameUI.SetActive(true);
+		m_PlayerController.life = true;//游戏点击开始才可以运动
         m_PlayerController.StartGame();
     }
 
@@ -84,6 +86,7 @@ public class UIManager : MonoBehaviour {
     {
         m_StartUI.SetActive(true);
         m_GameUI.SetActive(false);
-        m_GameScoreLabel.text = "0";
+		m_ScoreLabel.text = PlayerPrefs.GetInt("score", 0) + "";
+
     }
 }

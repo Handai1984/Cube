@@ -18,7 +18,7 @@ public class PlayerController : MonoBehaviour {
     private CameraFollow m_CameraFollow;
     private UIManager m_UIManager;
 
-    private bool life = true;
+	public bool life = false;//改成公共的
     private int gemCount = 0;
     private int socreCount = 0;
 
@@ -48,7 +48,7 @@ public class PlayerController : MonoBehaviour {
 
 	void Start () {
         gemCount = PlayerPrefs.GetInt("gem", 0);
-
+		socreCount = PlayerPrefs.GetInt ("score", 0);
         m_Transform = gameObject.GetComponent<Transform>();
 
         m_MapManager = GameObject.Find("MapManager").GetComponent<MapManager>();
@@ -61,6 +61,7 @@ public class PlayerController : MonoBehaviour {
         SetPlayerPos();
         m_CameraFollow.startFollow = true;
         m_MapManager.StartTileDown();
+
     }
 
     
@@ -168,7 +169,7 @@ public class PlayerController : MonoBehaviour {
         else
         {
             gameObject.AddComponent<Rigidbody>();
-            StartCoroutine("GameOver", true);
+			StartCoroutine("GameOver", false);//把true改成false解决方块死亡移动的问题
         }
 
     }
@@ -208,27 +209,27 @@ public class PlayerController : MonoBehaviour {
         {
             yield return new WaitForSeconds(0.5f);
         }
+		if(life)
+		{
+			Debug.Log("游戏结束");
+			m_CameraFollow.startFollow = false;
+			life = false;
+			SaveData();
+			//TODO:UI相关的交互.
+			StartCoroutine("ResetGame");
+		}
 
-        if(life)
-        {
-            Debug.Log("游戏结束");
-            m_CameraFollow.startFollow = false;
-            life = false;
-            SaveData();
-            //TODO:UI相关的交互.
-            StartCoroutine("ResetGame");
-        }
         //Time.timeScale = 0;
     }
 
     private void ResetPlayer()
     {
-        GameObject.Destroy(gameObject.GetComponent<Rigidbody>());
+	GameObject.Destroy(gameObject.GetComponent<Rigidbody>());
         
         z = 3;
         x = 2;
 
-        life = true;
+       // life = true;
 
         socreCount = 0;
     }
@@ -237,10 +238,10 @@ public class PlayerController : MonoBehaviour {
     private IEnumerator ResetGame()
     {
         yield return new WaitForSeconds(2);
-        ResetPlayer();
         m_MapManager.ResetGameMap();
         m_CameraFollow.ResetCamera();
+		m_UIManager.ResetUI();
 
-        m_UIManager.ResetUI();
+		ResetPlayer();
     }
 }
