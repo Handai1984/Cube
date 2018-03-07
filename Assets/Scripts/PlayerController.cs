@@ -22,6 +22,8 @@ public class PlayerController : MonoBehaviour {
     private int gemCount = 0;
     private int socreCount = 0;
 
+	private  ADUT ad;
+
     private void AddGemCount()
     {
         gemCount++;
@@ -54,10 +56,14 @@ public class PlayerController : MonoBehaviour {
         m_MapManager = GameObject.Find("MapManager").GetComponent<MapManager>();
         m_CameraFollow = GameObject.Find("Main Camera").GetComponent<CameraFollow>();
         m_UIManager = GameObject.Find("UI Root").GetComponent<UIManager>();
+
+		//ad
+		ad = GameObject.Find("MapManager").GetComponent<ADUT>();
 	}
 	
     public void StartGame()
     {
+		socreCount = 0;	
         SetPlayerPos();
         m_CameraFollow.startFollow = true;
         m_MapManager.StartTileDown();
@@ -136,6 +142,9 @@ public class PlayerController : MonoBehaviour {
     /// </summary>
     private void SetPlayerPos()
     {
+		if (life==false) {
+			return;
+		}
         Transform playerPos = m_MapManager.mapList[z][x].GetComponent<Transform>();
         MeshRenderer normal_a2 = null;
 
@@ -211,10 +220,11 @@ public class PlayerController : MonoBehaviour {
         }
 		if(life)
 		{
-			Debug.Log("游戏结束");
+			//Debug.Log("游戏结束");
 			m_CameraFollow.startFollow = false;
 			life = false;
 			SaveData();
+			ad.SendAction ("showVideoADWithType", "0");	//增加广告
 			//TODO:UI相关的交互.
 			StartCoroutine("ResetGame");
 		}

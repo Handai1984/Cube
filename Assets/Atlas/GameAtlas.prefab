@@ -54,8 +54,8 @@ MonoBehaviour:
   material: {fileID: 2100000, guid: a1c09a975bad0b84cb4ef4331e964c6d, type: 2}
   mSprites:
   - name: btn_char_buy
-    x: 1025
-    y: 1105
+    x: 1538
+    y: 1279
     width: 256
     height: 256
     borderLeft: 0
@@ -67,8 +67,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: btn_char_play
-    x: 1538
-    y: 1279
+    x: 0
+    y: 254
     width: 256
     height: 256
     borderLeft: 0
@@ -93,8 +93,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: btn_empty
-    x: 1025
-    y: 1536
+    x: 0
+    y: 511
     width: 512
     height: 512
     borderLeft: 0
@@ -106,8 +106,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: btn_help
-    x: 112
-    y: 30
+    x: 1353
+    y: 1030
     width: 72
     height: 94
     borderLeft: 0
@@ -119,8 +119,8 @@ MonoBehaviour:
     paddingTop: 17
     paddingBottom: 17
   - name: 'btn_leaderboard '
-    x: 0
-    y: 36
+    x: 1241
+    y: 1036
     width: 111
     height: 88
     borderLeft: 0
@@ -145,8 +145,8 @@ MonoBehaviour:
     paddingTop: 12
     paddingBottom: 12
   - name: btn_mute_off
-    x: 1909
-    y: 1051
+    x: 1138
+    y: 1026
     width: 102
     height: 98
     borderLeft: 0
@@ -158,8 +158,8 @@ MonoBehaviour:
     paddingTop: 15
     paddingBottom: 15
   - name: btn_mute_on
-    x: 1796
-    y: 1051
+    x: 1025
+    y: 1026
     width: 112
     height: 98
     borderLeft: 0
@@ -197,8 +197,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: btn_play
-    x: 0
-    y: 511
+    x: 1025
+    y: 1536
     width: 512
     height: 512
     borderLeft: 0
@@ -223,32 +223,6 @@ MonoBehaviour:
     paddingTop: 9
     paddingBottom: 8
   - name: btn_restore
-    x: 1796
-    y: 1150
-    width: 128
-    height: 128
-    borderLeft: 0
-    borderRight: 0
-    borderTop: 0
-    borderBottom: 0
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
-  - name: btn_share
-    x: 129
-    y: 133
-    width: 82
-    height: 120
-    borderLeft: 0
-    borderRight: 0
-    borderTop: 0
-    borderBottom: 0
-    paddingLeft: 23
-    paddingRight: 23
-    paddingTop: 4
-    paddingBottom: 4
-  - name: gem
     x: 0
     y: 125
     width: 128
@@ -261,9 +235,35 @@ MonoBehaviour:
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
+  - name: btn_share
+    x: 1796
+    y: 1029
+    width: 82
+    height: 120
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 23
+    paddingRight: 23
+    paddingTop: 4
+    paddingBottom: 4
+  - name: gem
+    x: 1796
+    y: 1150
+    width: 128
+    height: 128
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
   - name: gift
-    x: 0
-    y: 254
+    x: 513
+    y: 767
     width: 229
     height: 256
     borderLeft: 0
@@ -274,9 +274,22 @@ MonoBehaviour:
     paddingRight: 14
     paddingTop: 0
     paddingBottom: 0
+  - name: logo 1
+    x: 1025
+    y: 1299
+    width: 512
+    height: 236
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 10
+    paddingBottom: 10
   - name: logo1
     x: 1025
-    y: 1362
+    y: 1125
     width: 512
     height: 173
     borderLeft: 0
@@ -288,8 +301,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 83
   - name: new_char
-    x: 1795
-    y: 1279
+    x: 257
+    y: 254
     width: 235
     height: 256
     borderLeft: 0
@@ -301,8 +314,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: pause_big
-    x: 1282
-    y: 1105
+    x: 1795
+    y: 1279
     width: 244
     height: 256
     borderLeft: 0
