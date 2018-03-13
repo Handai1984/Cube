@@ -21,6 +21,14 @@ public class UIManager : MonoBehaviour {
 
     private PlayerController m_PlayerController;
 
+	private GoogleAD ad;
+//	private  ADUT ad;
+//
+//	void Awake()
+//	{
+//		ad = GameObject.Find("MapManager").GetComponent<ADUT>();
+//	}
+
 	void Start () {
         m_StartUI = GameObject.Find("Start_UI");
         m_GameUI = GameObject.Find("Game_UI");
@@ -41,8 +49,11 @@ public class UIManager : MonoBehaviour {
         m_Right = GameObject.Find("Right");
         UIEventListener.Get(m_Right).onClick = Right;
 
+		ad = GameObject.Find ("GoogleAD").GetComponent<GoogleAD> ();
+
         Init();
 
+//		ad.SendAction("showBannerAD", "");
         m_GameUI.SetActive(false);
 	}
 	
@@ -54,6 +65,8 @@ public class UIManager : MonoBehaviour {
         m_GemLabel.text = PlayerPrefs.GetInt("gem", 0) + "/100";
 		m_GameScoreLabel.text = PlayerPrefs.GetInt("score", 0) + "";	
         m_GameGemLabel.text = PlayerPrefs.GetInt("gem", 0) + "/100";
+		ad.RequestBanner();
+
     }
 
     public void UpdateData(int score, int gem)

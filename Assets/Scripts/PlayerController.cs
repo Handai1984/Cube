@@ -22,19 +22,21 @@ public class PlayerController : MonoBehaviour {
     private int gemCount = 0;
     private int socreCount = 0;
 
-	private  ADUT ad;
+	private GoogleAD bannerView;
+
+	//private  ADUT ad;
 
     private void AddGemCount()
     {
         gemCount++;
-        Debug.Log("宝石数:" + gemCount);
+      //  Debug.Log("宝石数:" + gemCount);
         m_UIManager.UpdateData(socreCount, gemCount);
     }
 
     public void AddScoreCount()
     {
         socreCount++;
-        Debug.Log("分数:" + socreCount);
+      //  Debug.Log("分数:" + socreCount);
         m_UIManager.UpdateData(socreCount, gemCount);
     }
 
@@ -56,9 +58,11 @@ public class PlayerController : MonoBehaviour {
         m_MapManager = GameObject.Find("MapManager").GetComponent<MapManager>();
         m_CameraFollow = GameObject.Find("Main Camera").GetComponent<CameraFollow>();
         m_UIManager = GameObject.Find("UI Root").GetComponent<UIManager>();
-
+		bannerView = GameObject.Find ("GoogleAD").GetComponent<GoogleAD> ();
+		bannerView.RequestInterstitial ();
 		//ad
-		ad = GameObject.Find("MapManager").GetComponent<ADUT>();
+		//ad = GameObject.Find("MapManager").GetComponent<ADUT>();
+
 	}
 	
     public void StartGame()
@@ -96,7 +100,7 @@ public class PlayerController : MonoBehaviour {
         {
             x--;
         }
-        Debug.Log("Left:z:" + z + "--x:" + x);
+      //  Debug.Log("Left:z:" + z + "--x:" + x);
         SetPlayerPos();
         CalcPosition();
     }
@@ -113,7 +117,7 @@ public class PlayerController : MonoBehaviour {
         {
             x++;
         }
-        Debug.Log("Right:z:" + z + "--x:" + x);
+      //  Debug.Log("Right:z:" + z + "--x:" + x);
         SetPlayerPos();
         CalcPosition();
     }
@@ -224,9 +228,14 @@ public class PlayerController : MonoBehaviour {
 			m_CameraFollow.startFollow = false;
 			life = false;
 			SaveData();
-			ad.SendAction ("showVideoADWithType", "0");	//增加广告
-			//TODO:UI相关的交互.
+			//ad.SendAction ("showInterstitialAD", "");	//增加广告
+//			bannerView.BannerDestory();
+//			print ("banner is destory");
+
+			bannerView.ShowInterstitial();
 			StartCoroutine("ResetGame");
+
+			//TODO:UI相关的交互.
 		}
 
         //Time.timeScale = 0;
@@ -251,7 +260,7 @@ public class PlayerController : MonoBehaviour {
         m_MapManager.ResetGameMap();
         m_CameraFollow.ResetCamera();
 		m_UIManager.ResetUI();
-
+		bannerView.RequestInterstitial ();
 		ResetPlayer();
     }
 }

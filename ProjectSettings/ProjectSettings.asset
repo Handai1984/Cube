@@ -7,7 +7,7 @@ PlayerSettings:
   productGUID: cd4b90c6aad7c4247922e7bde0b1894d
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
-  defaultScreenOrientation: 4
+  defaultScreenOrientation: 0
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
@@ -260,7 +260,7 @@ PlayerSettings:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: e6afe2c64b14c41b1b6859909a6b88bd, type: 3}
+      m_Icon: {fileID: 2800000, guid: c1651f0ecb2c44264acf4c8eeaed65a6, type: 3}
       m_Width: 128
       m_Height: 128
       m_Kind: 0
@@ -637,7 +637,12 @@ PlayerSettings:
     daydream:
       daydreamIconForeground: {fileID: 0}
       daydreamIconBackground: {fileID: 0}
-  cloudServicesEnabled: {}
+  cloudServicesEnabled:
+    Build: 0
+    Collab: 0
+    ErrorHub: 0
+    Hub: 0
+    UNet: 0
   facebookSdkVersion: 7.9.4
   apiCompatibilityLevel: 2
   cloudProjectId: 8342ac46-919e-4bc7-be5d-1eefc4bd2747

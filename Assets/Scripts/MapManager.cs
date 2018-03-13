@@ -207,7 +207,7 @@ public class MapManager : MonoBehaviour {
     /// </summary>
     private int CalcPR()
     {
-        int pr = Random.Range(1,100); //35
+        int pr = Random.Range(1,300); //35
         if(pr <= pr_hole)
         {
             return 1;

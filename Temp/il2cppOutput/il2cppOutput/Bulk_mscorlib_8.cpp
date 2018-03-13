@@ -1057,6 +1057,8 @@ extern String_t* _stringLiteral728803974;
 extern String_t* _stringLiteral1894799423;
 extern String_t* _stringLiteral1986456553;
 extern const uint32_t String_FormatHelper_m3913915042_MetadataUsageId;
+extern String_t* _stringLiteral1391532509;
+extern const uint32_t String_Copy_m3813992399_MetadataUsageId;
 extern const uint32_t String_Concat_m904156431_MetadataUsageId;
 extern const uint32_t String_Concat_m1715369213_MetadataUsageId;
 extern const uint32_t String_Concat_m3937257545_MetadataUsageId;
@@ -38135,6 +38137,76 @@ IL_0254:
 	{
 		StringBuilder_t * L_113 = ___result0;
 		return L_113;
+	}
+}
+// System.String System.String::Copy(System.String)
+extern "C"  String_t* String_Copy_m3813992399 (RuntimeObject * __this /* static, unused */, String_t* ___str0, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (String_Copy_m3813992399_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	int32_t V_0 = 0;
+	String_t* V_1 = NULL;
+	Il2CppChar* V_2 = NULL;
+	Il2CppChar* V_3 = NULL;
+	String_t* V_4 = NULL;
+	String_t* V_5 = NULL;
+	{
+		String_t* L_0 = ___str0;
+		if (L_0)
+		{
+			goto IL_0011;
+		}
+	}
+	{
+		ArgumentNullException_t1615371798 * L_1 = (ArgumentNullException_t1615371798 *)il2cpp_codegen_object_new(ArgumentNullException_t1615371798_il2cpp_TypeInfo_var);
+		ArgumentNullException__ctor_m1170824041(L_1, _stringLiteral1391532509, /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_1);
+	}
+
+IL_0011:
+	{
+		String_t* L_2 = ___str0;
+		NullCheck(L_2);
+		int32_t L_3 = L_2->get_length_0();
+		V_0 = L_3;
+		int32_t L_4 = V_0;
+		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
+		String_t* L_5 = String_InternalAllocateStr_m1198086868(NULL /*static, unused*/, L_4, /*hidden argument*/NULL);
+		V_1 = L_5;
+		int32_t L_6 = V_0;
+		if (!L_6)
+		{
+			goto IL_004d;
+		}
+	}
+	{
+		String_t* L_7 = V_1;
+		V_4 = L_7;
+		String_t* L_8 = V_4;
+		int32_t L_9 = RuntimeHelpers_get_OffsetToStringData_m2192601476(NULL /*static, unused*/, /*hidden argument*/NULL);
+		V_2 = (Il2CppChar*)((intptr_t)il2cpp_codegen_add((intptr_t)(((intptr_t)L_8)), (int32_t)L_9));
+		String_t* L_10 = ___str0;
+		V_5 = L_10;
+		String_t* L_11 = V_5;
+		int32_t L_12 = RuntimeHelpers_get_OffsetToStringData_m2192601476(NULL /*static, unused*/, /*hidden argument*/NULL);
+		V_3 = (Il2CppChar*)((intptr_t)il2cpp_codegen_add((intptr_t)(((intptr_t)L_11)), (int32_t)L_12));
+		Il2CppChar* L_13 = V_2;
+		Il2CppChar* L_14 = V_3;
+		int32_t L_15 = V_0;
+		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
+		String_CharCopy_m98228993(NULL /*static, unused*/, (Il2CppChar*)(Il2CppChar*)L_13, (Il2CppChar*)(Il2CppChar*)L_14, L_15, /*hidden argument*/NULL);
+		V_4 = (String_t*)NULL;
+		V_5 = (String_t*)NULL;
+	}
+
+IL_004d:
+	{
+		String_t* L_16 = V_1;
+		return L_16;
 	}
 }
 // System.String System.String::Concat(System.Object,System.Object)

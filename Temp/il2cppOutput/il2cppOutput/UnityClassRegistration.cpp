@@ -38,6 +38,9 @@ void RegisterStaticallyLinkedModulesGranular()
 	void RegisterModule_IMGUI();
 	RegisterModule_IMGUI();
 
+	void RegisterModule_ImageConversion();
+	RegisterModule_ImageConversion();
+
 	void RegisterModule_GameCenter();
 	RegisterModule_GameCenter();
 
@@ -52,9 +55,6 @@ void RegisterStaticallyLinkedModulesGranular()
 
 	void RegisterModule_UnityWebRequest();
 	RegisterModule_UnityWebRequest();
-
-	void RegisterModule_ImageConversion();
-	RegisterModule_ImageConversion();
 
 }
 
