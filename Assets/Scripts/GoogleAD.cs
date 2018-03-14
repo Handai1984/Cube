@@ -6,9 +6,12 @@ using GoogleMobileAds;
 
 
 public class GoogleAD : MonoBehaviour {
+	public string appIdAll;
+	public string appIdBanner;
+	public string appIdInterstial;
+	public string phoneId;
 
-
-		private BannerView bannerView;
+		private  BannerView bannerView;
 		private InterstitialAd interstitial;
 		
 	public void Awake()
@@ -32,7 +35,7 @@ public class GoogleAD : MonoBehaviour {
 		#elif UNITY_ANDROID
 		string adUnitId = "ca-app-pub-3940256099942544/6300978111";
 		#elif UNITY_IPHONE
-		string adUnitId = "ca-app-pub-3521489805936954~7342102274";
+		string adUnitId = appIdAll;
 		#else
 		string adUnitId = "unexpected_platform";
 		#endif
@@ -48,7 +51,7 @@ public class GoogleAD : MonoBehaviour {
 	{
 		return new AdRequest.Builder()
 			.AddTestDevice(AdRequest.TestDeviceSimulator)
-			.AddTestDevice("e92f3f152355cf85f59a5c2d2d9a87e2")
+			.AddTestDevice(phoneId)
 			.Build();
 
 
@@ -62,7 +65,7 @@ public class GoogleAD : MonoBehaviour {
 		#elif UNITY_ANDROID
 		string adUnitId = "ca-app-pub-3940256099942544/6300978111";
 		#elif UNITY_IPHONE
-		string adUnitId = "ca-app-pub-3521489805936954/2155457840";
+		string adUnitId = appIdBanner;
 		#else
 		string adUnitId = "unexpected_platform";
 		#endif
@@ -83,6 +86,16 @@ public class GoogleAD : MonoBehaviour {
 		print ("我开始展示啦");
 		}
 
+		public void BannerHide()
+	{
+		bannerView.Hide ();
+	}
+		public void BannerShow()
+	{
+		bannerView.Show ();
+	}
+
+
 	public  void  BannerDestory()
 	{
 		bannerView.Destroy ();
@@ -97,7 +110,7 @@ public class GoogleAD : MonoBehaviour {
 		#elif UNITY_ANDROID
 		string adUnitId = "ca-app-pub-3940256099942544/6300978111";
 		#elif UNITY_IPHONE
-		string adUnitId = "ca-app-pub-3521489805936954/2037804703";
+		string adUnitId = appIdInterstial;
 		#else
 		string adUnitId = "unexpected_platform";
 		#endif
