@@ -69,14 +69,14 @@ public class PlayerController : MonoBehaviour {
         m_CameraFollow = GameObject.Find("Main Camera").GetComponent<CameraFollow>();
         m_UIManager = GameObject.Find("UI Root").GetComponent<UIManager>();
 		//查找广告脚本
-		interstital1 = GameObject.Find ("GoogleADOne").GetComponent<GoogleAD> ();
-		interstital2 = GameObject.Find ("GoogleADTwo").GetComponent <GoogleAD> ();
+//		interstital1 = GameObject.Find ("GoogleADOne").GetComponent<GoogleAD> ();
+//		interstital2 = GameObject.Find ("GoogleADTwo").GetComponent <GoogleAD> ();
 //
-		gad.Add (interstital1);
-		gad.Add (interstital2);
-		print (gad.Count);
+//		gad.Add (interstital1);
+//		gad.Add (interstital2);
+//		print (gad.Count);
 		//初始化广告脚本
-		GADInit ();
+//		GADInit ();
 		//ad
 		//ad = GameObject.Find("MapManager").GetComponent<ADUT>();
 
@@ -260,7 +260,7 @@ public class PlayerController : MonoBehaviour {
 //			bannerView.BannerDestory();
 //			print ("banner is destory");
 
-			GADInterstitalShow ();
+//			GADInterstitalShow ();
 			StartCoroutine("ResetGame");
 
 			//TODO:UI相关的交互.
