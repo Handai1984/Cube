@@ -1,13 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cube", "Assembly-CSharp.csproj", "{A43657F2-DFD0-F1AD-69C5-B86E0C471339}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{A43657F2-DFD0-F1AD-69C5-B86E0C471339}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cube", "Assembly-CSharp-firstpass.csproj", "{BD754208-E319-009D-D4C0-5438C29ABBA7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-firstpass", "Assembly-CSharp-firstpass.csproj", "{BD754208-E319-009D-D4C0-5438C29ABBA7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cube", "Assembly-CSharp-Editor.csproj", "{4B76F1ED-FAA6-A479-76EF-19C54AD29C90}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor", "Assembly-CSharp-Editor.csproj", "{4B76F1ED-FAA6-A479-76EF-19C54AD29C90}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cube", "Assembly-CSharp-Editor-firstpass.csproj", "{5C4C3B93-E2A6-1E60-F476-A26B6E29CCB3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor-firstpass", "Assembly-CSharp-Editor-firstpass.csproj", "{5C4C3B93-E2A6-1E60-F476-A26B6E29CCB3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

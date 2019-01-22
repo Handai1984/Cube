@@ -19,12 +19,12 @@ public class PlayerController : MonoBehaviour {
     private UIManager m_UIManager;
 
 	public bool life = false;//改成公共的
-    private int gemCount = 0;
+    public int gemCount = 0;
     private int socreCount = 0;
 
-    private void AddGemCount()
+	public void AddGemCount(int num)
     {
-        gemCount++;
+		gemCount += num;
         Debug.Log("宝石数:" + gemCount);
         m_UIManager.UpdateData(socreCount, gemCount);
     }
@@ -35,6 +35,11 @@ public class PlayerController : MonoBehaviour {
         Debug.Log("分数:" + socreCount);
         m_UIManager.UpdateData(socreCount, gemCount);
     }
+
+	public void SubGemCount(int num) {
+		gemCount -= num;
+		m_UIManager.UpdateData (socreCount, gemCount);
+	}
 
     private void SaveData()
     {
@@ -47,7 +52,7 @@ public class PlayerController : MonoBehaviour {
     }
 
 	void Start () {
-        gemCount = PlayerPrefs.GetInt("gem", 0);
+       // gemCount = PlayerPrefs.GetInt("gem", 0);
 		socreCount = PlayerPrefs.GetInt ("score", 0);
         m_Transform = gameObject.GetComponent<Transform>();
 
@@ -58,6 +63,7 @@ public class PlayerController : MonoBehaviour {
 	
     public void StartGame()
     {
+		socreCount = 0;
         SetPlayerPos();
         m_CameraFollow.startFollow = true;
         m_MapManager.StartTileDown();
@@ -198,7 +204,7 @@ public class PlayerController : MonoBehaviour {
         if(coll.tag == "Gem")
         {
             GameObject.Destroy(coll.gameObject.GetComponent<Transform>().parent.gameObject);
-            AddGemCount();
+            AddGemCount(1);
         }
     }
 
